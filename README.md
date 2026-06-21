@@ -173,35 +173,35 @@ Management and Governance:
 
 • Amazon CloudWatch is an Infrastructure as Code (IaC) service that allows you to model, provision, and manage a collection of related AWS resources predictably and repeatedly using JSON or YAML templates.
 
-• AWS Command Line Interface (AWS CLI)
+• AWS Command Line Interface (AWS CLI) is a unified, open-source command-line tool that enables you to control, automate, and script management across all your AWS infrastructure services directly from a local terminal or shell.
 
-• AWS Compute Optimizer
+• AWS Compute Optimizer is a managed recommendation engine powered by machine learning that analyzes historical utilization metrics to help you right-size your workloads, reducing costs and improving performance. AWS COmpute Optimizer recommends optimal AWS resources for your workloads to reduce costs and improve performance by using machine learning to analyze historical utilization metrics. Over-provisioning resources can lead to unnecessary infrastructure cost, and under-provisioning resources can lead to poor application performance. Compute Optimizer helps you choose optimal configurations for three types of AWS resources: Amazon EC2 instances, Amazon EBS volumes, and AWS Lambda functions, based on your utilization data. By applying the knowledge drawn from Amazon’s own experience running diverse workloads in the cloud, Compute Optimizer identifies workload patterns and recommends optimal AWS resources. Compute Optimizer analyzes the configuration and resource utilization of your workload to identify dozens of defining characteristics, for example, if a workload is CPU-intensive, if it exhibits a daily pattern, or if a workload accesses local storage frequently. The service processes these characteristics and identifies the hardware resource required by the workload. Compute Optimizer infers how the workload would have performed on various hardware platforms (such as Amazon EC2 instances types) or using different configurations (such as Amazon EBS volume IOPS settings, and AWS Lambda function memory sizes) to offer recommendations.Compute Optimizer is available to you at no additional charge. To get started, you can opt in to the service in the AWS Compute Optimizer Console. 
 
-• AWS Config
+• AWS Config is a fully managed service that provides a detailed configuration inventory, continuous compliance auditing, and historical tracking of your AWS resource states over time. is a fully managed service that provides you with an AWS resource inventory, configuration history, and configuration change notifications to enable security and governance. The AWS Config Rules feature enables you to create rules that automatically check the configuration of AWS resources recorded by AWS Config. With AWS Config, you can discover existing and deleted AWS resources, determine your overall compliance against rules, and dive into configuration details of a resource at any point in time. These capabilities enable compliance auditing, security analysis, resource change tracking, and troubleshooting.
 
-• AWS Control Tower
+• AWS Control Tower is a high-level orchestration service that automates the setup and continuous governance of a secure, compliant, multi-account AWS environment (known as a Landing Zone) based on AWS security best practices.
 
-• AWS License Manager
+• AWS License Manager is a dedicated governance tool that allows you to centrally manage, track, and enforce third-party software licenses (such as Microsoft Windows Server or SQL Server) across your AWS and on-premises compute environments to prevent expensive compliance penalties.
 
-• Amazon Managed Grafana
+• Amazon Managed Grafana s a fully managed, highly available data visualization service developed in partnership with Grafana Labs that lets you query, visualize, and analyze operational metrics, logs, and traces across multiple disparate data sources in a single dashboard view.
 
-• Amazon Managed Service for Prometheus
+• Amazon Managed Service for Prometheus is a secure, highly available, and fully managed monitoring engine that natively handles container performance metrics at a massive scale without you needing to manage any storage clusters.
 
-• AWS Management Console
+• AWS Management Console is the secure, web-based graphical user interface (GUI) used to manually create, monitor, configure, and manage your entire AWS cloud ecosystem.
 
-• AWS Organizations
+• AWS Organizations is an account management service that allows you to centrally consolidate, govern, and secure multiple AWS accounts under a single hierarchical structure.
 
-• AWS Personal Health Dashboard
+• AWS Personal Health Dashboard  provides a personalized view of the availability and operational status of the exact AWS services powering your active infrastructure resources, complete with proactive alerts and remediation guides.
+ 
+• AWS Proton is a template-driven delivery service designed for platform engineering teams to automate and standardize the continuous deployment infrastructure-as-code pipelines of microservices and containers.
 
-• AWS Proton
+• AWS Service Catalog allows organizations to create, manage, and distribute portfolios of approved, standardized IT resources that end-users can deploy instantly inside a secure self-service portal.
 
-• AWS Service Catalog
+• AWS Systems Manager is an expansive operational hub that centralizes visibility and automates secure management tasks across your hybrid cloud server fleets.
 
-• AWS Systems Manager
+• AWS Trusted Advisor is an automated online cloud consultant that actively scans your account infrastructure against AWS best practices to deliver immediate optimization recommendations.
 
-• AWS Trusted Advisor
-
-• AWS Well-Architected Tool
+• AWS Well-Architected Tool is a structured governance framework that helps you review the status of your workloads against architectural best practices to identify critical architectural risks.
 
 
 Media Services:
