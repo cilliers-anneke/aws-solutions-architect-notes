@@ -206,116 +206,124 @@ Management and Governance:
 
 Media Services:
 
-• Amazon Elastic Transcoder
+• Amazon Elastic Transcoder is a fully managed, serverless media transcoding service designed to convert video and audio files from their source formats into versions that will play back smoothly on smartphones, tablets, PCs, and TVs.
 
-• Amazon Kinesis Video Streams
+• Amazon Kinesis Video Streams is a fully managed cloud ingestion service that makes it easy to securely stream live video from millions of connected devices for real-time analytics, machine learning, and playback.
 
 
 Migration and Transfer:
 
-• AWS Application Discovery Service
+• AWS Application Discovery Service helps enterprise customers plan migration projects by gathering information about their on-premises data centers. Planning data center migrations can involve thousands of workloads that are often deeply interdependent. Server utilization data and dependency mapping are important early first steps in the migration process. AWS Application Discovery Service collects and presents configuration, usage, and behavior data from your servers to help you better understand your workloads. The collected data is retained in encrypted format in an AWS Application Discovery Service data store. You can export this data as a CSV file and use it to estimate the Total Cost of Ownership (TCO) of running on AWS and to plan your migration to AWS. In addition, this data is also available in AWS Migration Hub, where you can migrate the discovered servers and track their progress as they get migrated to AWS.
 
-• AWS Application Migration Service (CloudEndure Migration)
+• AWS Application Migration Service (CloudEndure Migration) stopped accepting new customers in late 2025.
 
-• AWS Database Migration Service (AWS DMS)
+• AWS Database Migration Service (AWS DMS) (AWS DMS) helps you migrate databases to AWS easily and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. The AWS Database Migration Service can migrate your data to and from most widely used commercial and open-source databases. The service supports homogeneous migrations such as Oracle to Oracle, as well as heterogeneous migrations between different database platforms, such as Oracle to Amazon Aurora or Microsoft SQL Server to MySQL. It also allows you to stream data to Amazon Redshift from any of the supported sources including Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle, SAP ASE, and SQL Server, enabling consolidation and easy analysis of data in the petabyte-scale data warehouse. AWS Database Migration Service can also be used for continuous data replication with high availability.
 
-• AWS DataSync
+• AWS DataSync is a data transfer service that makes it easy for you to automate moving data between on-premises storage and Amazon S3 or Amazon Elastic File System (Amazon EFS). DataSync automatically handles many of the tasks related to data transfers that can slow down migrations or burden your IT operations, including running your own instances, handling encryption, managing scripts, network optimization, and data integrity validation. You can use DataSync to transfer data at speeds up to 10 times faster than open-source tools. DataSync uses an on-premises software agent to connect to your existing storage or file systems using the Network File System (NFS) protocol, so you don’t have write scripts or modify your applications to work with AWS APIs. You can use DataSync to copy data over Direct Connect or internet links to AWS. The service enables one-time data migrations, recurring data processing workflows, and automated replication for data protection and recovery. Getting started with DataSync is easy: Deploy the DataSync agent on premises, connect it to a file system or storage array, select Amazon EFS or Amazon S3 as your AWS storage, and start moving data. You pay only for the data you copy.
 
-• AWS Migration Hub
+• AWS Migration Hub is a data transfer service that makes it easy for you to automate moving data between on-premises storage and Amazon S3 or Amazon Elastic File System (Amazon EFS). DataSync automatically handles many of the tasks related to data transfers that can slow down migrations or burden your IT operations, including running your own instances, handling encryption, managing scripts, network optimization, and data integrity validation. You can use DataSync to transfer data at speeds up to 10 times faster than open-source tools. DataSync uses an on-premises software agent to connect to your existing storage or file systems using the Network File System (NFS) protocol, so you don’t have write scripts or modify your applications to work with AWS APIs. You can use DataSync to copy data over Direct Connect or internet links to AWS. The service enables one-time data migrations, recurring data processing workflows, and automated replication for data protection and recovery. Getting started with DataSync is easy: Deploy the DataSync agent on premises, connect it to a file system or storage array, select Amazon EFS or Amazon S3 as your AWS storage, and start moving data. You pay only for the data you copy.
 
-• AWS Server Migration Service (AWS SMS)
+• AWS Server Migration Service (AWS SMS) was fully discontinued and retired.
 
-• AWS Snow Family
+• AWS Snow Family helps customers that need to run operations in austere, non-data center environments, and in locations where there's lack of consistent network connectivity. The Snow Family comprises AWS Snowball and AWS Snowball Edge, and offers a number of physical devices and capacity points, most with built-in computing capabilities. These services help physically transport up to exabytes of data into and out of AWS. Snow Family devices are owned and managed by AWS and integrate with AWS security, monitoring, storage management, and computing capabilities.
 
-• AWS Transfer Family
+• AWS Transfer Family provides fully managed support for file transfers directly into and out of Amazon S3 or Amazon EFS. With support for Secure File Transfer Protocol (SFTP), File Transfer Protocol over SSL (FTPS), and File Transfer Protocol (FTP), the AWS Transfer Family helps you seamlessly migrate your file transfer workflows to AWS by integrating with existing authentication systems, and providing DNS routing with Amazon Route 53 so nothing changes for your customers and partners, or their applications. With your data in Amazon S3 or Amazon EFS, you can use it with AWS services for processing, analytics, ML, archiving, as well as home directories and developer tools. Getting started with the AWS Transfer Family is easy; there is no infrastructure to buy and set up.
 
 
 Networking and Content Delivery:
 
-• Amazon CloudFront
+• Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds.How Caches WorkWhen you request data (like opening a webpage or running a computer program), the system checks the cache first.Cache Hit: The system finds the data in the cache, resulting in a much faster retrieval.Cache Miss: The system fails to find the data in the cache and must retrieve it from the slower original source.
 
-• AWS Direct Connect
+• AWS Direct Connect AWS Direct Connect bypasses the internet to establish a dedicated, physical, private fiber-optic network connection from your on-premises datacenter directly into AWS. 
 
-• Elastic Load Balancing (ELB)
+• Elastic Load Balancing (ELB) automatically distributes incoming application traffic across multiple targets—such as EC2 instances, containers, and IP addresses—in one or more Availability Zones.
 
-• AWS Global Accelerator
+• AWS Global Accelerator is a networking service that improves your users' application performance and availability by utilizing AWS’s global network infrastructure.
 
-• AWS PrivateLink
+• AWS PrivateLink provides highly secure, private connectivity between VPCs, AWS services, and your on-premises networks without exposing your traffic to the public internet.
 
-• Amazon Route 53
+• Amazon Route 53 Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service designed to reliably route end-users to internet applications.
 
-• AWS Transit Gateway
+• AWS Transit Gateway acts as a centralized cloud router, connecting multiple VPCs and on-premises networks through a single hub to simplify network topology at scale.
 
-• Amazon VPC
+• Amazon VPC lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.
 
-• AWS VPN
+• AWS VPN AWS Site-to-Site VPN creates a secure, encrypted network connection between your on-premises data center or office network and your Amazon VPCs over the public internet.
 
 
 Security, Identity, and Compliance:
+If you are reinforcing an AWS cloud architecture to survive this landscape for your SAA-C03 checklist, your layout requires specific configurations:
+[User Request] ──> [ AWS WAF ] ──> [ Cognito + Advanced Security ] ──> [ Passkey / IAM ]
+                     (Blocks Bots)        (Flags Risky IPs/VPNs)         (Phishing Resistant)
+Transition away from Passwords entirely: The core takeaway of the 16B leak is that traditional password validation is fundamentally broken. Applications must shift to Passkeys or FIDO2-compliant authentication infrastructure. Passkeys use a unique public-private key pair bound to local physical devices; they cannot be stolen via keyloggers or harvested into massive dark-web data lists.  Enforce Adaptive Authentication in Cognito: Turn on Advanced Security Features within Amazon Cognito User Pools. If an attacker tries to use an extracted login credential from an unmapped IP address or unexpected geographic zone, Cognito instantly blocks the flow or dynamically flags the access attempt as high-risk.Implement Zero-Trust Network Policies: Never trust an identity just because it bypassed an initial login screen. Enforce continuous verification using IAM Permissions Boundaries and AWS Config Rules to ensure that even if an account is compromised, the attacker is locked in a tight sandbox with absolute zero structural ability to touch or export bulk production databases.  To see exactly how modern security systems analyze digital behavior to intercept these sophisticated human and technical attacks, review this BioCatch Digital Banking Fraud Prevention Demonstration which highlights how behavioral analytics detect hidden manipulation and outpace traditional password exploits in real time.
 
-• AWS Artifact
 
-• AWS Audit Manager
+• AWS Artifact is your go-to, central resource for compliance-related information that matters to you. It provides on-demand access to AWS security and compliance reports and select online agreements. Reports available in AWS Artifact include our Service Organization Control (SOC) reports, Payment Card Industry (PCI) reports, and certifications from accreditation bodies across geographies and compliance verticals that validate the implementation and operating effectiveness of AWS security controls. Agreements available in AWS Artifact include the Business Associate Addendum (BAA) and the Nondisclosure Agreement (NDA). AWS Artifact: A self-service portal to download AWS's compliance certification documents (e.g., formal ISO or PCI-DSS audit certifications). 
 
-• AWS Certificate Manager (ACM)
+• AWS Audit Manager An automated internal manager that maps your live AWS resource architecture configurations straight into formal regulatory compliance frameworks (like HIPAA or GDPR) to simplify audit reporting.
 
-• AWS CloudHSM
+• AWS Certificate Manager (ACM) The Automated SSL/TLS Provisioner.  The Mechanism: Provisions and automatically renews public SSL/TLS security certificates for secure HTTPS data transmission. ACM can only deploy certificates onto specific AWS edge interfaces, primarily an Application Load Balancer (ALB), an Amazon CloudFront distribution, or an Amazon API Gateway. It is a service that lets you easily provision, manage, and deploy Secure Sockets Layer/Transport Layer Security (SSL/TLS) certiﬁcates for use with AWS services and your internal connected resources. SSL/TLS certiﬁcates are used to secure network communications and establish the identity of websites over the Internet as well as resources on private networks. AWS Certificate Manager removes the time-consuming manual process of purchasing, uploading, and renewing SSL/TLS certiﬁcates.
 
-• Amazon Cognito
+• AWS CloudHSM is a cloud-based hardware security module (HSM) that enables you to easily generate and use your own encryption keys on the AWS Cloud. With AWS CloudHSM, you can manage your own encryption keys using dedicated FIPS 140-2 Level 3 validated HSMs. AWS CloudHSM offers you the flexibility to integrate with your applications using industry-standard APIs, such as PKCS#11, Java Cryptography Extensions (JCE), and Microsoft CryptoNG (CNG) libraries.
 
-• Amazon Detective
+• Amazon Cognito The External Customer Identity Store. The Differentiator: While IAM and Identity Center are for your internal workforce employees, Cognito is for building login screens for external app customers. lets you add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily. With Amazon Cognito, you can scale to millions of users and supports sign-in with social identity providers such as Apple, Facebook, Twitter, or Amazon, with SAML 2.0 identity solutions, or by using your own identity system.
 
-• AWS Directory Service
+• Amazon Detective The Core Noun: Security Incident Root-Cause Investigator. The Job: When GuardDuty flags a critical security breach alert, you turn on Detective. It automatically aggregates log history to build a visual graph showing exactly how an attacker moved across your network, which IAM roles were assumed, and what resources were affected.
 
-• AWS Firewall Manager
+• AWS Directory Service The Corporate AD Bridge. The Setup: It allows your AWS infrastructure to connect seamlessly with an existing enterprise Microsoft Active Directory. The highest-yielding flavor is AWS Managed Microsoft AD, which builds an actual Windows Server AD domain controller inside your VPC, managed completely by AWS.
 
-• Amazon GuardDuty
+• AWS Firewall Manager The Core Noun: Centralized Security Policy Enforcer. The Job: If an Organization contains hundreds of accounts, manually ensuring every account runs a WAF or a specific Shield rule is impossible. Firewall Manager allows a central security administrator to build a single policy rule and propagate it automatically across every account in the organization. It is a security management service which allows you to centrally configure and manage firewall rules across your accounts and applications in AWS Organizations. As new applications are created, Firewall Manager makes it easy to bring new applications and resources into compliance by enforcing a common set of security rules. Now you have a single service to build firewall rules, create security policies, and enforce them in a consistent, hierarchical manner across your entire infrastructure, from a central administrator account.
 
-• AWS Identity and Access Management (IAM)
+• Amazon GuardDuty: The Core Noun: The Intelligent Threat Detection Eye. The Mechanism: An active machine learning security monitor. It continuously processes account meta-logs: VPC Flow Logs, AWS CloudTrail management events, and DNS query logs. It looks for anomalous behavior, such as an EC2 instance suddenly communicating with a known cryptocurrency mining pool or an IAM key executing APIs from an unfamiliar global location.
 
-• Amazon Inspector
+• AWS Identity and Access Management (IAM) The Fine-Grained Gatekeeper. It manages internal authentication and authorization. enables you to securely control access to AWS services and resources for your AWS users, groups, and roles. Using IAM, you can create and manage fine-grained access controls with permissions, specify who can access which services and resources, and under which conditions.
 
-• AWS Key Management Service (AWS KMS)
+• AWS IAM Identity Center (Formerly AWS Single Sign-On)The Multi-Account Access Portal. Built on top of AWS Organizations, it centralizes user sign-ins across an entire multi-account corporate landscape. Instead of creating separate IAM users inside every member account, workers sign into one portal once to dynamically assume their assigned roles across specific sandboxes.
 
-• Amazon Macie
+• Amazon Inspector: The Core Noun: Automated Vulnerability Software Scanner. The Mechanism: Inspector actively reviews software configurations. It scans EC2 instances, Amazon ECR container images, and AWS Lambda functions for known software vulnerabilities (CVEs) and unintended network exposure blocks. 
 
-• AWS Network Firewall
+• AWS Key Management Service (AWS KMS) makes it easy for you to create and manage cryptographic keys and control their use across a wide range of AWS services and in your applications. AWS KMS uses hardware security modules (HSM) to protect and validate your AWS KMS keys under the FIPS 140-2 Cryptographic Module Validation Program. AWS KMS is integrated with AWS CloudTrail to provide you with logs of all key usage to help meet your regulatory and compliance needs.
 
-• AWS Resource Access Manager (AWS RAM)
+• Amazon Macie: The Core Noun: S3 Sensitive Data Scanner. The Job: Uses machine learning and pattern matching to scan your Amazon S3 buckets to find hidden pools of unencrypted sensitive data, such as Personally Identifiable Information (PII), credit card records, or intellectual property.t is a fully managed data security and data privacy service that uses inventory evaluations, machine learning, and pattern matching to discover sensitive data and accessibility in your Amazon S3 environment. Macie supports scalable on-demand and automated sensitive data discovery jobs that automatically tracks changes to the bucket and only evaluates new or modified objects over time. Using Macie, you can detect a large and growing list of sensitive data types for many countries and Regions, including multiple types of financial data, personal health information (PHI), and personally identifiable information (PII), as well as custom types. Macie also continually evaluates your Amazon S3 environment to provide an S3 resource summary and security evaluation across all of your accounts. You can search, filter, and sort S3 buckets by metadata variables, such as bucket names, tags, and security controls like encryption status or public accessibility. For any unencrypted buckets, publicly accessible buckets, or buckets shared with AWS accounts outside those you have defined in AWS Organizations, you can be alerted to act.
 
-• AWS Secrets Manager
 
-• AWS Security Hub
+• AWS Network Firewall: The Core Noun: VPC Layer 3/4 Packet Inspection. WAF vs. Network Firewall: WAF only understands web traffic (HTTP/HTTPS). AWS Network Firewall protects the entire raw VPC network layout, inspecting non-HTTP protocols, filtering outbound domain names, and blocking malicious data patterns moving between subnets. It is a managed service that makes it easy to deploy essential network protections for all of your Amazon Virtual Private Clouds (VPCs). The service can be setup with just a few clicks and scales automatically with your network traffic, so you don't have to worry about deploying and managing any infrastructure. The AWS Network Firewall flexible rules engine lets you define firewall rules that give you fine-grained control over network traffic, such as blocking outbound Server Message Block (SMB) requests to prevent the spread of malicious activity. You can also import rules you’ve already written in common open source rule formats as well as enable integrations with managed intelligence feeds sourced by AWS Partners. AWS Network Firewall works together with AWS Firewall Manager so you can build policies based on AWS Network Firewall rules and then centrally apply those policies across your VPCs and accounts.
 
-• AWS Shield
+• AWS Resource Access Manager (AWS RAM) The Core Noun: Secure Cross-Account Resource Sharing. The Setup: Instead of creating separate, redundant resources inside multiple AWS accounts, RAM allows you to securely share specific resources (like a central Transit Gateway, Route 53 Resolver rules, or specific VPC Subnets) across accounts within your AWS Organization securely without duplication.
 
-• AWS Single Sign-On
+• AWS Secrets Manager The Automated Database Password Vault.Secrets Manager vs. SSM Parameter Store Trap:Choose SSM Parameter Store for general, cheap application configurations, text variables, and structural software license keys.Choose AWS Secrets Manager if you need to store sensitive production database strings that require automated, scheduled credential rotation. Secrets Manager communicates directly with RDS databases to securely change the password on a schedule without manual code edits.  AWS Secrets Manager helps you protect secrets needed to access your applications, services, and IT resources. The service enables you to easily rotate, manage, and retrieve database credentials, API keys, and other secrets throughout their lifecycle. Users and applications retrieve secrets with a call to Secrets Manager APIs, eliminating the need to hardcode sensitive information in plain text. Secrets Manager offers secret rotation with built-in integration for Amazon RDS, Amazon Redshift, and Amazon DocumentDB. The service is also extensible to other types of secrets, including API keys and OAuth tokens. In addition, Secrets Manager enables you to control access to secrets using fine-grained permissions and audit secret rotation centrally for resources in the AWS Cloud, third-party services, and on-premises.
 
-• AWS WAF
+• AWS Security Hub is a cloud security posture management service that performs automated, continuous security best practice checks against your AWS resources. Security Hub CSPM aggregates your security alerts (i.e. findings) from various AWS services and partner products in a standardized format so that you can more easily take action on them. To maintain a complete view of your security posture in AWS, you need to integrate multiple tools and services including threat detections from Amazon GuardDuty, vulnerabilities from Amazon Inspector, sensitive data classifications from Amazon Macie, resource configuration issues from AWS Config, and AWS Partner Network products. Security Hub CSPM simplifies how you understand and improve your security posture with automated security best practice checks powered by AWS Config rules and automated integrations with dozens of AWS services and partner products. The Core Noun: Central Security Compliance Dashboard. The Aggregator: It acts as a single pane of glass, automatically pulling in security findings from GuardDuty, Inspector, Macie, IAM Access Analyzer, and AWS Config, prioritizing them in a centralized view.
+
+• AWS Shield: Dedicated DDoS Defense.Standard vs. Advanced: Shield Standard: Automatically turned on for all AWS customers at no extra cost, blocking common Layer 3 and Layer 4 network flood attacks. Shield Advanced: A premium enterprise subscription service that provides 24/7 access to a dedicated DDoS Response Team (DRT), financial mitigation protection against bill spikes caused by attacks, and advanced layer protection for CloudFront and ALBs.
+
+• AWS Single Sign-On WS Single Sign-On has been fully rebranded by AWS as AWS IAM Identity Center.
+
+• AWS WAF (Web Application Firewall)The Core Noun: Layer 7 HTTP Request Filter. It is a web application ﬁrewall that helps protect your web applications or APIs against common web exploits and bots that may affect availability, compromise security, or consume excessive resources. AWS WAF gives you control over how traffic reaches your applications by enabling you to create security rules that control bot traffic and block common attack patterns, such as SQL injection or cross-site scripting. You can also customize rules that filter out specific traffic patterns. You can get started quickly using Managed Rules for AWS WAF, a pre-configured set of rules managed by AWS or AWS Marketplace sellers to address issues like the OWASP Top 10 security risks and automated bots that consume excess resources, skew metrics, or can cause downtime. These rules are regularly updated as new issues emerge. AWS WAF includes a full-featured API that you can use to automate the creation, deployment, and maintenance of security rules.
 
 
 Serverless:
 
-• AWS AppSync
+• AWS AppSync is a fully managed enterprise service that simplifies application development by providing a scalable, secure GraphQL API endpoint that automatically aggregates and synchronizes data across multiple backend sources in real time.
 
-• AWS Fargate
+• AWS Fargate is a serverless, pay-as-you-go compute engine for containers that allows you to run Amazon ECS or Amazon EKS tasks without provisioning, patching, or scaling any underlying EC2 server infrastructure.
 
-• AWS Lambda
+• AWS Lambda is an event-driven, zero-administration serverless compute service that runs your application source code only in direct response to specific trigger events, automatically managing all underlying runtime infrastructure.
 
 
 Storage:
 
-• AWS Backup
+• AWS Backup is a fully managed, policy-driven service that centralizes and automates data protection across multiple AWS services and hybrid on-premises workloads to simplify corporate compliance. 1. The Core Noun: Centralized Snapshot Orchestration. Instead of writing manual, scattered cron scripts to backup an EBS volume in one console window and an RDS database in another, AWS Backup aggregates everything into a single operational interface.
 
-• Amazon Elastic Block Store (Amazon EBS)
+• Amazon Elastic Block Store (Amazon EBS)  provides high-performance, persistent block-level storage volumes designed for use with Amazon EC2 instances for transactional workloads and intensive database environments.
 
-• Amazon Elastic File System (Amazon EFS)
+• Amazon Elastic File System (Amazon EFS) is a serverless, fully elastic, regional file system that provides shared, concurrent access for thousands of Linux-based compute instances using standard network file system protocols.
 
-• Amazon FSx (for all types)
+• Amazon FSx (for all types) provides fully managed, high-performance, third-party commercial and open-source file systems optimized for specialized enterprise file storage workloads.
 
-• Amazon S3
+• Amazon S3 is an object storage service offering industry-leading scalability, data availability, security, and performance, boasting 99.999999999% (11 9s) of structural durability.
 
-• Amazon S3 Glacier
+• Amazon S3 Glacier is a secure, durable, and extremely low-cost serverless storage class family optimized for long-term data archiving and digital preservation.
 
 • AWS Storage Gateway
 
